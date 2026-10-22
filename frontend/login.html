@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Secure Banking Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/auth.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-shell login-shell">
+      <section class="auth-visual">
+        <div class="auth-logo">
+          <span>SB</span>
+        </div>
+        <div class="auth-copy">
+          <p class="eyebrow">Protected access</p>
+          <h1>Welcome back</h1>
+          <p>Secure access to your digital banking workspace.</p>
+        </div>
+        <div class="security-badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 5 5v6c0 4.4 2.8 8.5 7 10 4.2-1.5 7-5.6 7-10V5l-7-3Zm0 5.2 3.2 3.2-1.4 1.4L12 11.8l-1.8 1.8-1.4-1.4L12 7.2Z"/></svg>
+          <span>User credentials are protected using secure hashing and validated access controls.</span>
+        </div>
+      </section>
+
+      <section class="auth-panel">
+        <div class="auth-card">
+          <div class="auth-header">
+            <div>
+              <p class="eyebrow muted">Secure Banking Application</p>
+              <h2>Login</h2>
+            </div>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username" required />
+              <small class="error-message" data-error-for="username"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="password-wrapper">
+                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+                <button type="button" class="toggle-password" data-target="password" aria-label="Show password">Show</button>
+              </div>
+              <small class="error-message" data-error-for="password"></small>
+            </div>
+
+            <div class="options-row">
+              <label class="checkbox-row">
+                <input type="checkbox" id="rememberMe" />
+                <span>Remember me</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="loginButton">
+              <span class="btn-label">Login</span>
+              <span class="spinner hidden" aria-hidden="true"></span>
+            </button>
+
+            <p class="auth-link-row">
+              Need an account? <a href="register.html">Create one</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/auth.js"></script>
+  </body>
+</html>

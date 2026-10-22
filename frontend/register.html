@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Secure Banking Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/auth.css" />
+  </head>
+  <body class="auth-body">
+    <main class="auth-shell register-shell">
+      <section class="auth-panel">
+        <div class="auth-card">
+          <div class="auth-header">
+            <div>
+              <p class="eyebrow muted">Secure Banking Application</p>
+              <h2>Create account</h2>
+            </div>
+          </div>
+
+          <form id="registerForm" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Enter your full name" required />
+              <small class="error-message" data-error-for="fullName"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="registerUsername">Username</label>
+              <input id="registerUsername" name="username" type="text" autocomplete="username" placeholder="Choose a username" required />
+              <small class="error-message" data-error-for="registerUsername"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="registerPassword">Password</label>
+              <div class="password-wrapper">
+                <input id="registerPassword" name="password" type="password" autocomplete="new-password" placeholder="Create a strong password" required />
+                <button type="button" class="toggle-password" data-target="registerPassword" aria-label="Show password">Show</button>
+              </div>
+              <div class="password-strength" aria-live="polite">
+                <span class="strength-bar"></span>
+              </div>
+              <small class="helper-text">Use at least 8 characters with a mix of letters, numbers, and symbols.</small>
+              <small class="error-message" data-error-for="registerPassword"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm password</label>
+              <div class="password-wrapper">
+                <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Confirm your password" required />
+                <button type="button" class="toggle-password" data-target="confirmPassword" aria-label="Show password">Show</button>
+              </div>
+              <small class="error-message" data-error-for="confirmPassword"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="registerButton">
+              <span class="btn-label">Register</span>
+              <span class="spinner hidden" aria-hidden="true"></span>
+            </button>
+
+            <p class="auth-link-row">
+              Already have an account? <a href="login.html">Login</a>
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <section class="auth-visual registration-visual">
+        <div class="auth-logo">
+          <span>SB</span>
+        </div>
+        <div class="auth-copy">
+          <p class="eyebrow">Create secure access</p>
+          <h1>Open your secure account</h1>
+          <p>Build a strong password and protect your financial profile with secure access rules.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-row">
+            <span>Security</span>
+            <strong>Protected</strong>
+          </div>
+          <div class="feature-row">
+            <span>Privacy</span>
+            <strong>Private</strong>
+          </div>
+          <div class="feature-row">
+            <span>Authentication</span>
+            <strong>Verified</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/auth.js"></script>
+  </body>
+</html>
